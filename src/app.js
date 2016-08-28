@@ -42,6 +42,7 @@ function requireAuth(store, nextState, replace, next) {
 }
 
 export function initialize({ apiUrl, cookies, isServer, currentLocation, userAgent } = {}) {
+  
   const reducer = combineReducers({
     auth: authStateReducer,
     routing: routerReducer,
@@ -54,10 +55,14 @@ export function initialize({ apiUrl, cookies, isServer, currentLocation, userAge
     : browserHistory;
 
   // create the redux store
+  // debugger;
+  console.log(" 🔔 <app.js> THIS:", this)
+  // var _window = window;
   const store = createStore(
     reducer,
     compose(
       applyMiddleware(thunk)
+      // _window.devToolsExtension ? _window.devToolsExtension() : f => f
     )
   );
 

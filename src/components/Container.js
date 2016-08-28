@@ -12,7 +12,7 @@ class Container extends React.Component {
       <div className="wrapper">
         <Navbar className="main-nav">
           <LinkContainer to="/">
-            <Navbar.Brand>Redux Auth</Navbar.Brand>
+            <Navbar.Brand>Gitadel</Navbar.Brand>
           </LinkContainer>
           <Nav>
             <LinkContainer to="/" onlyActiveOnIndex>
@@ -28,6 +28,7 @@ class Container extends React.Component {
           {this.props.children}
         </Grid>
 
+        {/*
         <a href="https://github.com/lynndylanhurley/redux-auth">
           <img
             style={{ position: 'absolute', top: 0, right: 0, border: 0 }}
@@ -36,6 +37,7 @@ class Container extends React.Component {
             data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
           />
         </a>
+        */}
       </div>
     );
   }

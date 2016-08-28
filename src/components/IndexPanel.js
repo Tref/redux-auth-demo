@@ -14,8 +14,9 @@ class IndexPanel extends React.Component {
   }
 
   render() {
+    const cols = this.props.cols || 6
     return (
-      <Col sm={6}>
+      <Col sm={cols}>
         <Panel {...this.props} />
       </Col>
     );
